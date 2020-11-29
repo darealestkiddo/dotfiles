@@ -1,3 +1,4 @@
+# sync subtitiles file names with series file names
 import os
 
 def main():
