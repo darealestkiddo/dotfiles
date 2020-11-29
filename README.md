@@ -1,1 +1,2 @@
-# My personal dotfiles with Ubuntu 20.04 and Regolith setup
+# My personal dotfiles
+With WSL/Ubuntu 20.04 and Gnome on Wayland.
