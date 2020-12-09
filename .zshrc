@@ -108,6 +108,5 @@ alias vi="nvim"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-  export SPICETIFY_INSTALL="/home/quynx/spicetify-cli"
   export PATH="$SPICETIFY_INSTALL:$PATH"
 
