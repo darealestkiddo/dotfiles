@@ -51,6 +51,8 @@ call plug#end()
 
 let delimitMate_expand_cr = 1
 let g:auto_save = 0  " enable AutoSave on Vim startup
+"autoformat bind
+noremap <F3> :Autoformat<CR>
 "input
 nnoremap <leader>i :10split input.txt<CR>
 nnoremap <leader>w <C-W>W
@@ -64,8 +66,7 @@ nnoremap <C-H> <C-W><C-H>
 "let g:formatters_cpp = ['mycpp']
 "let g:formatters_c = ['mycpp']
 let g:AutoPairsShortcutJump = ''
-let g:python3_host_prog="/usr/bin/python3.8"
-noremap <F3> :Format<CR>:Autoformat<CR>
+let g:python3_host_prog="/usr/bin/python"
 "autocmd filetype cpp au BufWrite * :Autoformat
 "autocmd filetype c au BufWrite * :Autoformat
 "autocmd filetype python au BufWrite * :Autoformat
@@ -89,11 +90,6 @@ nnoremap <leader>f :NERDTreeFind<CR>
 nnoremap <leader>t <C-w>w
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-"indent code
-"nnoremap <F3> :Format<CR>gg=G''zz
-"inoremap <F3> <ESC>:Format<CR>gg=G''zz
-
-
 "move line around
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
@@ -115,7 +111,7 @@ let g:airline_theme='solarized'
 set signcolumn=number
 colorscheme NeoSolarized
 let g:neosolarized_visibility='low'
-"hi Normal guibg=NONE ctermbg=NONE
+hi Normal guibg=NONE ctermbg=NONE
 "let g:nord_cursor_line_number_background = 1
 let g:airline_powerline_fonts = 1
 "let g:ycm_enable_diagnostic_signs=0
