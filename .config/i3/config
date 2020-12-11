@@ -25,6 +25,8 @@ font pango:Hack Nerd Font 8
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id feh --bg-scale /usr/share/backgrounds/wall.jpg
+exec --no-startup-id ibus-daemon -drx
+exec --no-startup-id blueman-applet
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -45,7 +47,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 
 #firefox
-bindsym $mod+Shift+Return exec firefox 
+bindsym $mod+Shift+Return exec brave 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -189,3 +191,4 @@ bar {
 #for_window [title="geany_run_script_S5CVV0.sh"] floating enable
 for_window [class="XTerm"] floating enable
 for_window [class="Org.gnome.Nautilus"] floating enable
+bindsym $mod+minus scratchpad show
