@@ -1,0 +1,8 @@
+2020/12/15-14:13:28.102 4937 Reusing MANIFEST /home/quynx/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/chrome-extension_cjpalhdlnbpafiamejdnhcphjbkeiagm_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/15-14:13:28.103 4937 Recovering log #46
+2020/12/15-14:13:28.103 4937 Reusing old log /home/quynx/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/chrome-extension_cjpalhdlnbpafiamejdnhcphjbkeiagm_0.indexeddb.leveldb/000046.log 
+2020/12/15-14:13:30.112 4938 Level-0 table #50: started
+2020/12/15-14:13:30.113 4938 Level-0 table #50: 0 bytes OK
+2020/12/15-14:13:30.116 4938 Delete type=0 #46
+2020/12/15-14:13:30.116 4938 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/12/15-14:13:30.116 4938 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

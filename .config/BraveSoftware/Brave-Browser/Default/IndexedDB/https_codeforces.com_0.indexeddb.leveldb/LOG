@@ -1,0 +1,15 @@
+2020/12/15-14:30:27.646 5311 Reusing MANIFEST /home/quynx/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_codeforces.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/15-14:30:27.647 5311 Recovering log #11
+2020/12/15-14:30:27.647 5311 Reusing old log /home/quynx/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_codeforces.com_0.indexeddb.leveldb/000011.log 
+2020/12/15-14:30:29.676 533e Level-0 table #16: started
+2020/12/15-14:30:29.678 533e Level-0 table #16: 488 bytes OK
+2020/12/15-14:30:29.680 533e Delete type=0 #11
+2020/12/15-14:30:29.681 533e Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/12/15-14:30:29.681 533e Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0b\x007\x000\x00a\x007\x00c\x002\x008\x00f\x003\x00d\x00e' @ 62 : 1
+2020/12/15-14:30:29.681 533e Compacting 1@1 + 1@2 files
+2020/12/15-14:30:29.682 533e Generated table #17@1: 20 keys, 610 bytes
+2020/12/15-14:30:29.682 533e Compacted 1@1 + 1@2 files => 610 bytes
+2020/12/15-14:30:29.684 533e compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/12/15-14:30:29.684 533e Delete type=2 #13
+2020/12/15-14:30:29.684 533e Delete type=2 #16
+2020/12/15-14:30:29.685 533e Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0b\x007\x000\x00a\x007\x00c\x002\x008\x00f\x003\x00d\x00e' @ 62 : 1 .. (end); will stop at (end)

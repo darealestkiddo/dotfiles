@@ -1,0 +1,7 @@
+2020/12/14-17:01:04.885 dbd0 Reusing MANIFEST /home/quynx/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_addons.mozilla.org_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/14-17:01:04.885 dbd0 Recovering log #3
+2020/12/14-17:01:04.885 dbd0 Reusing old log /home/quynx/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_addons.mozilla.org_0.indexeddb.leveldb/000003.log 
+2020/12/14-17:01:32.912 dbe4 Level-0 table #5: started
+2020/12/14-17:01:32.915 dbe4 Level-0 table #5: 1269 bytes OK
+2020/12/14-17:01:32.917 dbe4 Delete type=0 #3
+2020/12/14-17:01:32.917 dbe4 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

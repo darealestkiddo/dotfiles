@@ -1,0 +1,15 @@
+2020/12/13-18:03:18.094 15e8 Reusing MANIFEST /home/quynx/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_docs.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/13-18:03:18.094 15e8 Recovering log #4
+2020/12/13-18:03:18.095 15e8 Reusing old log /home/quynx/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_docs.google.com_0.indexeddb.leveldb/000004.log 
+2020/12/13-18:05:39.089 193c Level-0 table #8: started
+2020/12/13-18:05:39.092 193c Level-0 table #8: 44491 bytes OK
+2020/12/13-18:05:39.095 193c Delete type=0 #4
+2020/12/13-18:05:39.095 193c Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/12/13-18:05:39.095 193c Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x03\x03\x01'\x00a\x002\x004\x00b\x008\x00f\x008\x00a\x00b\x004\x000\x00e\x009\x004\x009\x009\x003\x008\x004\x003\x000\x000\x00d\x003\x001\x00a\x00e\x002\x00b\x007\x00f\x00f\x00_\x003\x00_\x001\x00:\x000\x000' @ 1356 : 0
+2020/12/13-18:05:39.095 193c Compacting 1@1 + 1@2 files
+2020/12/13-18:05:39.098 193c Generated table #9@1: 272 keys, 9238 bytes
+2020/12/13-18:05:39.098 193c Compacted 1@1 + 1@2 files => 9238 bytes
+2020/12/13-18:05:39.100 193c compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/12/13-18:05:39.100 193c Delete type=2 #8
+2020/12/13-18:05:39.100 193c Delete type=2 #5
+2020/12/13-18:05:39.101 193c Manual compaction at level-1 from '\x00\x01\x03\x03\x01'\x00a\x002\x004\x00b\x008\x00f\x008\x00a\x00b\x004\x000\x00e\x009\x004\x009\x009\x003\x008\x004\x003\x000\x000\x00d\x003\x001\x00a\x00e\x002\x00b\x007\x00f\x00f\x00_\x003\x00_\x001\x00:\x000\x000' @ 1356 : 0 .. (end); will stop at (end)

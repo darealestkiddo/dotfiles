@@ -1,0 +1,2 @@
+[2020-12-14 17:46:17.933] [renderer1] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/quynx/coding/codeforces/.vscode'
+[2020-12-14 17:46:17.933] [renderer1] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/quynx/coding/.vscode'

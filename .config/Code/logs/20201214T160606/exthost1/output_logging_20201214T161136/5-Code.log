@@ -1,0 +1,4 @@
+[Running] cd "/home/quynx/zcode/" && g++ a.cpp -o a && "/home/quynx/zcode/"a
+
+[Done] exited with code=null in 82.801 seconds
+

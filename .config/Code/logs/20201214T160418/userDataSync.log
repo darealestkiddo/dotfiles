@@ -1,0 +1,60 @@
+[2020-12-14 16:04:22.588] [userDataSync] [info] Using settings sync service https://vscode-sync.trafficmanager.net/
+[2020-12-14 16:04:22.588] [userDataSync] [info] Auto Sync is disabled.
+[2020-12-14 16:05:22.693] [userDataSync] [info] Did reset the local sync state.
+[2020-12-14 16:05:23.543] [userDataSync] [info] Settings: Updated local settings
+[2020-12-14 16:05:23.549] [userDataSync] [info] Settings: Updated last synchronized settings
+[2020-12-14 16:05:23.552] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-12-14 16:05:23.558] [userDataSync] [info] Keybindings: Updated last synchronized keybindings
+[2020-12-14 16:05:23.570] [userDataSync] [info] Snippets: Created snippet cpp.json
+[2020-12-14 16:05:23.575] [userDataSync] [info] Snippets: Created snippet python.json
+[2020-12-14 16:05:23.579] [userDataSync] [info] Snippets: Updated last synchronized snippets
+[2020-12-14 16:05:23.590] [userDataSync] [info] GlobalState: Updated global state ["commandPalette.mru.cache","commandPalette.mru.counter","cpp.1.editedCount","cpp.1.editedDate","hasNotifiedOfSettingsAutosave","http.linkProtectionTrustedDomains","views.cachedViewPositions","workbench.panel.terminal.hidden","workbench.view.extensions.state.hidden","workbench.view.remote.state.hidden","workbench.view.sync.state.hidden","nps/skipVersion","nps/isCandidate","colorThemeData","cpp.1.lastSessionDate","cpp.1.sessionCount","java.2.lastSessionDate","java.2.sessionCount","javascript.1.lastSessionDate","javascript.1.sessionCount","nps/lastSessionDate","nps/sessionCount","typescript.1.lastSessionDate","typescript.1.sessionCount","workbench.activity.pinnedViewlets2","workbench.explorer.views.state.hidden","workbench.panel.pinnedPanels","workbench.scm.views.state.hidden","workbench.view.debug.state.hidden"]
+[2020-12-14 16:05:23.590] [userDataSync] [info] GlobalState: Updated local ui state
+[2020-12-14 16:05:23.595] [userDataSync] [info] GlobalState: Updated last synchronized ui state
+[2020-12-14 16:05:24.079] [userDataSync] [info] Extensions: Enabled extension ryanolsonx.solarized 2.0.3
+[2020-12-14 16:05:24.082] [userDataSync] [info] Extensions: Enabled extension arcticicestudio.nord-visual-studio-code 0.15.0
+[2020-12-14 16:05:24.085] [userDataSync] [info] Extensions: Disabled extension eliverlara.andromeda 1.7.0
+[2020-12-14 16:05:24.089] [userDataSync] [info] Extensions: Enabled extension ms-vscode-remote.remote-wsl 0.52.0
+[2020-12-14 16:05:24.124] [userDataSync] [info] Extensions: Enabled extension dracula-theme.theme-dracula 2.22.3
+[2020-12-14 16:05:24.135] [userDataSync] [info] Extensions: Enabled extension vscodevim.vim 1.18.5
+[2020-12-14 16:05:24.453] [userDataSync] [info] Extensions: Enabled extension ms-toolsai.jupyter 2020.12.414227025
+[2020-12-14 16:05:24.628] [userDataSync] [info] Extensions: Enabled extension 13xforever.language-x86-64-assembly 2.3.0
+[2020-12-14 16:05:24.646] [userDataSync] [info] Extensions: Enabled extension ms-vscode.cpptools 1.1.3
+[2020-12-14 16:05:24.839] [userDataSync] [info] Extensions: Enabled extension ms-python.python 2020.11.371526539
+[2020-12-14 16:05:25.009] [userDataSync] [info] Extensions: Installed extension. arcticicestudio.nord-visual-studio-code 0.15.0
+[2020-12-14 16:05:25.101] [userDataSync] [info] Extensions: Installed extension. eliverlara.andromeda 1.7.0
+[2020-12-14 16:05:25.127] [userDataSync] [info] Extensions: Installed extension. ryanolsonx.solarized 2.0.3
+[2020-12-14 16:05:25.154] [userDataSync] [info] Extensions: Installed extension. dracula-theme.theme-dracula 2.22.3
+[2020-12-14 16:05:25.230] [userDataSync] [info] Extensions: Installed extension. 13xforever.language-x86-64-assembly 2.3.0
+[2020-12-14 16:05:25.242] [userDataSync] [info] Extensions: Installed extension. ms-vscode-remote.remote-wsl 0.52.0
+[2020-12-14 16:05:25.457] [userDataSync] [info] Extensions: Installed extension. vscodevim.vim 1.18.5
+[2020-12-14 16:05:25.827] [userDataSync] [info] Extensions: Installed extension. ms-vscode.cpptools 1.1.3
+[2020-12-14 16:05:28.934] [userDataSync] [info] Extensions: Installed extension. ms-python.python 2020.11.371526539
+[2020-12-14 16:05:32.139] [userDataSync] [info] Extensions: Installed extension. ms-toolsai.jupyter 2020.12.414227025
+[2020-12-14 16:05:32.142] [userDataSync] [info] Extensions: Updated last synchronized extensions
+[2020-12-14 16:05:32.176] [userDataSync] [info] Auto Sync: Started
+[2020-12-14 16:05:32.176] [userDataSync] [info] Auto Sync: Triggered by Interval
+[2020-12-14 16:05:32.377] [userDataSync] [info] Settings: No changes found during synchronizing settings.
+[2020-12-14 16:05:32.383] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-12-14 16:05:32.389] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-12-14 16:05:32.618] [userDataSync] [info] GlobalState: Updated remote ui state
+[2020-12-14 16:05:32.625] [userDataSync] [info] GlobalState: Updated last synchronized ui state
+[2020-12-14 16:05:32.696] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-12-14 16:05:32.696] [userDataSync] [info] Sync done. Took 355ms
+[2020-12-14 16:05:34.759] [userDataSync] [info] Auto Sync: Triggered by Activity
+[2020-12-14 16:05:34.863] [userDataSync] [info] Settings: No changes found during synchronizing settings.
+[2020-12-14 16:05:34.870] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-12-14 16:05:34.880] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-12-14 16:05:35.100] [userDataSync] [info] GlobalState: Updated remote ui state
+[2020-12-14 16:05:35.107] [userDataSync] [info] GlobalState: Updated last synchronized ui state
+[2020-12-14 16:05:35.252] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-12-14 16:05:35.253] [userDataSync] [info] Sync done. Took 400ms
+[2020-12-14 16:05:43.939] [userDataSync] [info] Auto Sync: Triggered by Activity
+[2020-12-14 16:05:44.025] [userDataSync] [info] Settings: No changes found during synchronizing settings.
+[2020-12-14 16:05:44.030] [userDataSync] [info] Keybindings: No changes found during synchronizing keybindings.
+[2020-12-14 16:05:44.038] [userDataSync] [info] Snippets: No changes found during synchronizing snippets.
+[2020-12-14 16:05:44.232] [userDataSync] [info] GlobalState: Updated remote ui state
+[2020-12-14 16:05:44.240] [userDataSync] [info] GlobalState: Updated last synchronized ui state
+[2020-12-14 16:05:44.300] [userDataSync] [info] Extensions: No changes found during synchronizing extensions.
+[2020-12-14 16:05:44.301] [userDataSync] [info] Sync done. Took 288ms
+[2020-12-14 16:05:57.166] [userDataSync] [info] Auto Sync: Stopped

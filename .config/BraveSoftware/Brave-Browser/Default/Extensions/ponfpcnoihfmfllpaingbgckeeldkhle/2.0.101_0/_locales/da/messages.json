@@ -1,0 +1,398 @@
+{
+   "add": {
+      "message": "Tilføj"
+   },
+   "ads_removed": {
+      "message": "Reklamer er blevet fjernet"
+   },
+   "annotations_shown_hidden": {
+      "message": "Anmærkninger er blevet vist/skjult"
+   },
+   "auto_cinema_mode": {
+      "message": "Aktiver biograftilstanden automatisk"
+   },
+   "auto_enable_filters": {
+      "message": "Aktiver filtre automatisk"
+   },
+   "auto_enable_theater_mode": {
+      "message": "Aktiver automatisk YouTubes “Biograftilstand”"
+   },
+   "auto_enlarge_player": {
+      "message": "Forstør videoafspilleren automatisk"
+   },
+   "auto_execute_script": {
+      "message": "Kør scriptet automatisk når YouTube™ er indlæst i en fane"
+   },
+   "auto_expand_description": {
+      "message": "Udvid automatisk videoernes beskrivelser"
+   },
+   "auto_focus_video_player": {
+      "message": "Giv automatisk fokuset tilbage til videoafspilleren når:"
+   },
+   "auto_pause_videos": {
+      "message": "Pause videoer åbnet i baggrundsfaner automatisk"
+   },
+   "auto_remove_ads": {
+      "message": "Fjern automatisk reklamer"
+   },
+   "auto_remove_annotations": {
+      "message": "Fjern automatisk anmærkninger"
+   },
+   "auto_select_quality": {
+      "message": "Afspil automatisk videoer med min foretrukne kvalitet"
+   },
+   "auto_sort_comments": {
+      "message": "Sortér automatisk kommentarer fra nyeste til ældste"
+   },
+   "backup": {
+      "message": "Backup"
+   },
+   "boost_button_instructions": {
+      "message": "Info: Klik på denne knap for at aktivere/deaktivere lydforstærkeren."
+   },
+   "boost_volume": {
+      "message": "Forstærk lydstyrken"
+   },
+   "border": {
+      "message": "Kant:"
+   },
+   "bottom_left_corner": {
+      "message": "Nedre venstre hjørne"
+   },
+   "bottom_right_corner": {
+      "message": "Nedre højre hjørne"
+   },
+   "brightness": {
+      "message": "Lysstyrke:"
+   },
+   "buttons": {
+      "message": "Knapper"
+   },
+   "buttons_active_label": {
+      "message": "Aktive knapper:"
+   },
+   "buttons_label": {
+      "message": "Knapper:"
+   },
+   "cinema_button_instructions": {
+      "message": "Info: Klik på denne knap for at aktivere/deaktivere biograftilstanden."
+   },
+   "cinema_enabled_disabled": {
+      "message": "Biograftilstand er blevet aktiveret/deaktiveret"
+   },
+   "cinema_mode": {
+      "message": "Biograftilstand"
+   },
+   "cinema_mode_enlarge_player": {
+      "message": "Forstør videoafspilleren automatisk når biograftilstanden er aktiveret"
+   },
+   "clean_button_instructions": {
+      "message": "Info: Klik på denne knap for at fjerne reklamer. Højreklik for at vise/skjule anmærkninger."
+   },
+   "color": {
+      "message": "Farve:"
+   },
+   "color_inversion": {
+      "message": "Farve inversion:"
+   },
+   "colors": {
+      "message": "Farver"
+   },
+   "configure_keyboard_shortcuts": {
+      "message": "Info: Skriv chrome://extensions/shortcuts i adressefeltet for at konfigurere tastaturgenveje."
+   },
+   "contrast": {
+      "message": "Kontrast:"
+   },
+   "control_volume": {
+      "message": "Juster lydstyrkeniveauet med musehjulet når du holder musen over videoafspilleren"
+   },
+   "control_volume_mouse_button": {
+      "message": "Kun når den højre museknap er trykket"
+   },
+   "custom_script": {
+      "message": "Brugerdefineret script"
+   },
+   "custom_script_instructions": {
+      "message": "Indsæt eller indtast din JavaScript kode her, gem det ved at anvende knappen forneden, klik derefter på “Brugerdefineret script”-knappen på værktøjslinjen når du vil køre det."
+   },
+   "custom_script_warning": {
+      "message": "Advarsel: Af sikkerhedsårsager bør du kun anvende kode som du forstår eller kode, der er skrevet af en udvikler du stoler på."
+   },
+   "custom_theme": {
+      "message": "Brugerdefineret tema"
+   },
+   "custom_theme_instructions": {
+      "message": "Indsæt eller indtast din CSS-kode her, gem derefter ved at anvende knappen forneden."
+   },
+   "default_playback_speed": {
+      "message": "Standard afspilningshastighed:"
+   },
+   "default_volume_level": {
+      "message": "Standard lydstyrkeniveau:"
+   },
+   "description": {
+      "message": "Masser af funktioner til at forbedre din brugeroplevelse på YouTube™."
+   },
+   "detach_button_instructions": {
+      "message": "Info: Klik på denne knap for at løsrive videoafspilleren. Højreklik på denne knap for at stoppe videoen på YouTube™ i stedet for at pause den når videoafspilleren er løsrevet. For at få den løsrevne videoafspiller til altid at være på toppen af andre vinduer, besøg den følgende side:"
+   },
+   "detach_player": {
+      "message": "Løsn afspiller"
+   },
+   "disable_autoplay": {
+      "message": "Deaktiver YouTubes “Autoplay”-funktion"
+   },
+   "disable_preloading": {
+      "message": "Deaktiver forudindlæsning når videoer er pauset automatisk"
+   },
+   "donate": {
+      "message": "Donere"
+   },
+   "enlarged_player_viewport": {
+      "message": "Brug hele billedet til den forstørrede videoafspiller når biograftilstanden ikke er aktiveret, uden at ændre størrelsesforholdet"
+   },
+   "export": {
+      "message": "Eksportér"
+   },
+   "export_instructions": {
+      "message": "Lav en ny tekstfil og indsæt koden forneden uden at ændre den."
+   },
+   "filters": {
+      "message": "Filtre"
+   },
+   "filters_button_instructions": {
+      "message": "Info: Klik på denne knap for at aktivere/deaktivere filtre. Højreklik på denne knap for at justere filtre. Du kan også aktivere/deaktivere filtre, hvis du holder “Control”-knappen (Ctrl) og “Shift”-knappen nede, når du klikker på videoafspilleren."
+   },
+   "filters_enabled_disabled": {
+      "message": "Filtre blev aktiveret/deaktiveret"
+   },
+   "fourth_choice": {
+      "message": "Fjerde valg:"
+   },
+   "gaussian_blur": {
+      "message": "Gaussisk udviskning:"
+   },
+   "grayscale": {
+      "message": "Gråtoneskala:"
+   },
+   "html5_player_only": {
+      "message": "(Kun HTML5 afspiller)"
+   },
+   "hue_rotation": {
+      "message": "farvetone:"
+   },
+   "ignore_playlists": {
+      "message": "Pause ikke videoer i playlister"
+   },
+   "import": {
+      "message": "Importér"
+   },
+   "import_error": {
+      "message": "Indholdet af backupfilen er ugyldigt!"
+   },
+   "import_instructions": {
+      "message": "Indsæt indholdet af backupfilen og klik på “Importér”-knappen. Denne side vil automatisk blive genindlæst hvis instillinger er importeret uden problemer."
+   },
+   "keyboard_shortcuts": {
+      "message": "Tastaturgenveje"
+   },
+   "keyboard_shortcuts_list": {
+      "message": "For en fuld liste af tastaturgenveje på YouTube™, besøg den følgende side:"
+   },
+   "locale_code": {
+      "message": "da"
+   },
+   "loop_button_instructions": {
+      "message": "Info: Klik på denne knap for at aktivere/deaktivere looptilstanden."
+   },
+   "loop_enabled_disabled": {
+      "message": "Looptilstand er blevet aktiveret/deaktiveret"
+   },
+   "loop_video": {
+      "message": "Loop video"
+   },
+   "message": {
+      "message": "Besked"
+   },
+   "miscellaneous": {
+      "message": "Diverse"
+   },
+   "not_now": {
+      "message": "Ikke nu"
+   },
+   "opacity": {
+      "message": "Opacitet:"
+   },
+   "options": {
+      "message": "Indstillinger"
+   },
+   "options_button_instructions": {
+      "message": "Info: Klik på denne knap for at åbne indstillingssiden."
+   },
+   "override_playback_speeds": {
+      "message": "Overskriv standard afspilningshastigheder"
+   },
+   "page_reload_required": {
+      "message": "Enhancer for YouTube™ er blevet opdateret, denne side skal genindlæses."
+   },
+   "pause_foreground_tab": {
+      "message": "Pause også videoer åbnet i forgrunden"
+   },
+   "pause_videos": {
+      "message": "Pause videoer der spiller i baggrundsfaner, når en video spiller i forgrunden"
+   },
+   "pin_video_player": {
+      "message": "Fastgør videoafspilleren når man ruller ad siden"
+   },
+   "pinned_video_player_position": {
+      "message": "Position af fastgjorte videoafspiller:"
+   },
+   "pinned_video_player_size": {
+      "message": "Størrelse på fastgjorte videoafspiller:"
+   },
+   "playback_speed_modified": {
+      "message": "Afspilningshastighed er ændret"
+   },
+   "preferred_quality": {
+      "message": "Foretrukne kvalitet:"
+   },
+   "preview": {
+      "message": "Forhåndsvisning"
+   },
+   "rate": {
+      "message": "Bedøm"
+   },
+   "remove": {
+      "message": "Fjern"
+   },
+   "remove_ads": {
+      "message": "Fjern reklamer"
+   },
+   "reset_filters": {
+      "message": "Nulstil filtre"
+   },
+   "resize_button_instructions": {
+      "message": "Info: Klik på denne knap for at tilpasse størrelsen på videoafspilleren. Højreklik på knappen for at centrere videoafspilleren i billedet."
+   },
+   "resize_player": {
+      "message": "Tilpas størrelse på afspiller"
+   },
+   "restore_default_colors": {
+      "message": "Nulstil standardfarver"
+   },
+   "reverse_mouse_wheel_direction": {
+      "message": "Omvend musehjulets retning for at justere afspilningshastigheden og lydstyrkeniveauet"
+   },
+   "saturation": {
+      "message": "Mætning:"
+   },
+   "save": {
+      "message": "Gem"
+   },
+   "script_button_instructions": {
+      "message": "Info: Klik på denne knap for at køre det brugerdefinerede script."
+   },
+   "second_choice": {
+      "message": "Andet valg:"
+   },
+   "sepia": {
+      "message": "Sepia:"
+   },
+   "share": {
+      "message": "Del"
+   },
+   "share_message": {
+      "message": "Fortæl dine venner og følgere om Enhancer for YouTube™. Tak!"
+   },
+   "share_on_facebook": {
+      "message": "Del på Facebook"
+   },
+   "share_on_google_plus": {
+      "message": "Del på Google+"
+   },
+   "share_on_pinterest": {
+      "message": "Del på Pinterest"
+   },
+   "share_on_reddit": {
+      "message": "Del på Reddit"
+   },
+   "share_on_twitter": {
+      "message": "Del på Twitter"
+   },
+   "show_hide_annotations": {
+      "message": "Vis/skjul anmærkninger"
+   },
+   "slide_effect": {
+      "message": "Glid op/ned effekt"
+   },
+   "slow_down_button_instructions": {
+      "message": "Info: Klik på denne knap for at sætte afspilningshastigheden ned."
+   },
+   "speed": {
+      "message": "Fart"
+   },
+   "speed_button_instructions": {
+      "message": "Info: Brug musehjulet for at justere afspilningshastigheden når du holder musen over denne knap. Klik på den for at anvende standard afspilningshastigheden. Du kan også bruge musehjulet til at justere afspilningshastigheden, når du holder musen over videoaspilleren, og klikke på den for at anvende standardhastigheden, hvis du holder “Control”-knappen (Ctrl) nede."
+   },
+   "speed_up_button_instructions": {
+      "message": "Info: Klik på denne knap for at øge afspilningshastigheden."
+   },
+   "speed_variation": {
+      "message": "Fartforskel når musehjulet drejer, eller når fartknapperne “-” og “+” bliver klikket:"
+   },
+   "support": {
+      "message": "Support"
+   },
+   "support_request_instructions": {
+      "message": "Giv disse informationer når du anmoder om support eller rapporterer en fejl."
+   },
+   "theme": {
+      "message": "Tema"
+   },
+   "theme_by_default": {
+      "message": "Standardtema"
+   },
+   "third_choice": {
+      "message": "Trejde valg:"
+   },
+   "toolbar": {
+      "message": "Værktøjslinje"
+   },
+   "toolbar_label": {
+      "message": "Værktøjslinje:"
+   },
+   "tooltips": {
+      "message": "Værktøjstip"
+   },
+   "top_left_corner": {
+      "message": "Øvre venstre hjørne"
+   },
+   "top_right_corner": {
+      "message": "Øvre højre hjørne"
+   },
+   "translate": {
+      "message": "Oversæt"
+   },
+   "transparency": {
+      "message": "Gennemsigtighed:"
+   },
+   "video_player": {
+      "message": "Videoafspiller"
+   },
+   "video_player_pinned": {
+      "message": "Videoafspilleren er blevet fastgjort"
+   },
+   "video_player_resized": {
+      "message": "Videoafspilleren har ændret størrelse"
+   },
+   "volume_booster_enabled_disabled": {
+      "message": "Lydforstærkeren er blevet aktiveret/deaktiveret"
+   },
+   "volume_variation": {
+      "message": "Lydstyrkevariation når musehjulet drejer:"
+   },
+   "whitelisted_channels": {
+      "message": "Hvidlistede kanaler:"
+   }
+}

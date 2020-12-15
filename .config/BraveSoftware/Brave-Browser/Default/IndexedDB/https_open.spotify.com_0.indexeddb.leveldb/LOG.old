@@ -1,0 +1,15 @@
+2020/12/12-13:44:33.290 c85 Reusing MANIFEST /home/quynx/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_open.spotify.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/12-13:44:33.290 c85 Recovering log #4
+2020/12/12-13:44:33.290 c85 Reusing old log /home/quynx/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_open.spotify.com_0.indexeddb.leveldb/000004.log 
+2020/12/12-13:51:31.860 1284 Level-0 table #8: started
+2020/12/12-13:51:31.868 1284 Level-0 table #8: 193799 bytes OK
+2020/12/12-13:51:31.871 1284 Delete type=0 #4
+2020/12/12-13:51:31.871 1284 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/12/12-13:51:31.871 1284 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01 \x03\x00\x90Zg[ewB\x00\x01J\x00i\x00m\x00a\x00g\x00e\x00s\x00-\x00v\x001\x00|\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00i\x00.\x00s\x00c\x00d\x00n\x00.\x00c\x00o\x00/\x00i\x00m\x00a\x00g\x00e\x00/\x00a\x00b\x006\x007\x006\x001\x006\x00d\x000\x000\x000\x000\x00b\x002\x007\x003\x000\x000\x005\x00a\x00b\x00e\x00a\x00c\x00e\x00b\x00e\x003\x00d\x005\x003\x000\x009\x00a\x000\x00c\x003\x00f\x00c\x000' @ 6843 : 1
+2020/12/12-13:51:31.871 1284 Compacting 1@1 + 1@2 files
+2020/12/12-13:51:31.878 1284 Generated table #9@1: 1105 keys, 123248 bytes
+2020/12/12-13:51:31.878 1284 Compacted 1@1 + 1@2 files => 123248 bytes
+2020/12/12-13:51:31.880 1284 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/12/12-13:51:31.881 1284 Delete type=2 #8
+2020/12/12-13:51:31.881 1284 Delete type=2 #5
+2020/12/12-13:51:31.881 1284 Manual compaction at level-1 from '\x00\x01\x01 \x03\x00\x90Zg[ewB\x00\x01J\x00i\x00m\x00a\x00g\x00e\x00s\x00-\x00v\x001\x00|\x00h\x00t\x00t\x00p\x00s\x00:\x00/\x00/\x00i\x00.\x00s\x00c\x00d\x00n\x00.\x00c\x00o\x00/\x00i\x00m\x00a\x00g\x00e\x00/\x00a\x00b\x006\x007\x006\x001\x006\x00d\x000\x000\x000\x000\x00b\x002\x007\x003\x000\x000\x005\x00a\x00b\x00e\x00a\x00c\x00e\x00b\x00e\x003\x00d\x005\x003\x000\x009\x00a\x000\x00c\x003\x00f\x00c\x000' @ 6843 : 1 .. (end); will stop at (end)

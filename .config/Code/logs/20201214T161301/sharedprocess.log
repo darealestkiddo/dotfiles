@@ -1,0 +1,14 @@
+[2020-12-14 16:13:05.510] [sharedprocess] [info] main {"machineId":"0431a8f54aeadab609be8f1c336f32d68499d884eefdb3b04e55b7aabaf9233a","windowId":2}
+[2020-12-14 16:13:45.524] [sharedprocess] [info] Starting to clean up unused language packs.
+[2020-12-14 16:17:02.305] [sharedprocess] [info] Installing extension: xaver.clang-format
+[2020-12-14 16:17:02.815] [sharedprocess] [info] Downloaded extension: xaver.clang-format undefined
+[2020-12-14 16:17:02.876] [sharedprocess] [info] Extracted extension to /home/quynx/.vscode/extensions/.xaver.clang-format-1.9.0: xaver.clang-format
+[2020-12-14 16:17:02.877] [sharedprocess] [info] Renamed to /home/quynx/.vscode/extensions/xaver.clang-format-1.9.0
+[2020-12-14 16:17:02.878] [sharedprocess] [info] Installation completed. xaver.clang-format
+[2020-12-14 16:17:02.885] [sharedprocess] [info] Extensions installed successfully: xaver.clang-format
+[2020-12-14 16:35:01.847] [sharedprocess] [info] Installing extension: divyanshuagrawal.competitive-programming-helper
+[2020-12-14 16:35:02.456] [sharedprocess] [info] Downloaded extension: divyanshuagrawal.competitive-programming-helper undefined
+[2020-12-14 16:35:02.642] [sharedprocess] [info] Extracted extension to /home/quynx/.vscode/extensions/.divyanshuagrawal.competitive-programming-helper-4.5.5: divyanshuagrawal.competitive-programming-helper
+[2020-12-14 16:35:02.643] [sharedprocess] [info] Renamed to /home/quynx/.vscode/extensions/divyanshuagrawal.competitive-programming-helper-4.5.5
+[2020-12-14 16:35:02.644] [sharedprocess] [info] Installation completed. divyanshuagrawal.competitive-programming-helper
+[2020-12-14 16:35:02.648] [sharedprocess] [info] Extensions installed successfully: divyanshuagrawal.competitive-programming-helper

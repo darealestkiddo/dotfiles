@@ -46,8 +46,16 @@ Plug 'ap/vim-css-color'
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clangd-completer --go-completer --rust-completer --ts-completer' }
 "Plug 'rdnetto/ycm-generator', { 'branch': 'stable' }
 Plug 'Raimondi/delimitMate'
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
+
+"floaterm
+nnoremap   <silent>   <leader>tt :FloatermToggle<CR>
+tnoremap   <silent>   <leader>tt :FloatermToggle<CR>
+nnoremap <silent> <F11> :FloatermNew ranger<CR>
+tnoremap <Esc> <C-\><C-n>
+let g:floaterm_autoinsert = v:false
 
 let delimitMate_expand_cr = 1
 let g:auto_save = 0  " enable AutoSave on Vim startup
@@ -72,14 +80,14 @@ let g:python3_host_prog="/usr/bin/python"
 "autocmd filetype python au BufWrite * :Autoformat
 
 autocmd filetype cpp nnoremap <F9> :!g++ -g -ulimit -Wall -Wno-unused-result -std=gnu++17 -O2 % -o %:r<CR>
-autocmd filetype cpp nnoremap <F10> :!g++ -g -ulimit -Wall -Wno-unused-result -std=gnu++17 -O2 % -o %:r && ./%:r < input.txt<CR>
+autocmd filetype cpp nnoremap <F10> :FloatermNew g++ -g -ulimit -Wall -Wno-unused-result -std=gnu++17 -O2 % -o %:r && ./%:r<CR>
 autocmd filetype asm nnoremap <F10> :!nasm -f elf % && ld -m elf_i386 %:r.o -o %:r && ./%:r <CR>
 autocmd filetype asm nnoremap <F9> :!nasm -f elf % && ld -m elf_i386 %:r.o -o %:r<CR>
 autocmd filetype asm set filetype=nasm
-autocmd filetype c nnoremap <F9> :!gcc -g -std=c11 -o %:r % -O2<CR>
-autocmd filetype cpp nnoremap <F5> :!(./%:r < input.txt)<CR>
-autocmd filetype c nnoremap <F5> :!(./%:r < input.txt)<CR>
-autocmd filetype python nnoremap <F5> :!(python3 % < input.txt)<CR>
+autocmd filetype c nnoremap <F9> :! gcc -g -std=c11 -o %:r % -O2<CR>
+autocmd filetype cpp nnoremap <F5> :FloatermNew ./%:r<CR>
+autocmd filetype c nnoremap <F5> :FloatermNew ./%:r <CR>
+autocmd filetype python nnoremap <F5> :FloatermNew python3 %<CR>
 autocmd filetype asm nnoremap <F5> :!./%:r<CR>
 "yank
 nnoremap <leader>y :%y<CR>
@@ -275,3 +283,4 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+

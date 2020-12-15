@@ -1,0 +1,63 @@
+[2020-12-14 16:04:22.528] [sharedprocess] [info] main {"machineId":"0431a8f54aeadab609be8f1c336f32d68499d884eefdb3b04e55b7aabaf9233a","windowId":2}
+[2020-12-14 16:04:22.588] [sharedprocess] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/quynx/.config/Code/User/snippets'
+[2020-12-14 16:05:02.539] [sharedprocess] [info] Starting to clean up unused language packs.
+[2020-12-14 16:05:24.080] [sharedprocess] [info] Installing extension: ryanolsonx.solarized
+[2020-12-14 16:05:24.082] [sharedprocess] [info] Installing extension: arcticicestudio.nord-visual-studio-code
+[2020-12-14 16:05:24.085] [sharedprocess] [info] Installing extension: eliverlara.andromeda
+[2020-12-14 16:05:24.089] [sharedprocess] [info] Installing extension: ms-vscode-remote.remote-wsl
+[2020-12-14 16:05:24.124] [sharedprocess] [info] Installing extension: dracula-theme.theme-dracula
+[2020-12-14 16:05:24.135] [sharedprocess] [info] Installing extension: vscodevim.vim
+[2020-12-14 16:05:24.453] [sharedprocess] [info] Installing extension: ms-toolsai.jupyter
+[2020-12-14 16:05:24.628] [sharedprocess] [info] Installing extension: 13xforever.language-x86-64-assembly
+[2020-12-14 16:05:24.646] [sharedprocess] [info] Installing extension: ms-vscode.cpptools
+[2020-12-14 16:05:24.840] [sharedprocess] [info] Installing extension: ms-python.python
+[2020-12-14 16:05:24.856] [sharedprocess] [info] Downloaded extension: arcticicestudio.nord-visual-studio-code undefined
+[2020-12-14 16:05:24.878] [sharedprocess] [info] Downloaded extension: ms-vscode-remote.remote-wsl undefined
+[2020-12-14 16:05:24.947] [sharedprocess] [info] Downloaded extension: ryanolsonx.solarized undefined
+[2020-12-14 16:05:24.949] [sharedprocess] [info] Downloaded extension: eliverlara.andromeda undefined
+[2020-12-14 16:05:24.995] [sharedprocess] [info] Extracted extension to /home/quynx/.vscode/extensions/.arcticicestudio.nord-visual-studio-code-0.15.0: arcticicestudio.nord-visual-studio-code
+[2020-12-14 16:05:24.996] [sharedprocess] [info] Renamed to /home/quynx/.vscode/extensions/arcticicestudio.nord-visual-studio-code-0.15.0
+[2020-12-14 16:05:24.999] [sharedprocess] [info] Installation completed. arcticicestudio.nord-visual-studio-code
+[2020-12-14 16:05:25.006] [sharedprocess] [info] Extensions installed successfully: arcticicestudio.nord-visual-studio-code
+[2020-12-14 16:05:25.017] [sharedprocess] [info] Downloaded extension: dracula-theme.theme-dracula undefined
+[2020-12-14 16:05:25.081] [sharedprocess] [info] Extracted extension to /home/quynx/.vscode/extensions/.eliverlara.andromeda-1.7.0: eliverlara.andromeda
+[2020-12-14 16:05:25.082] [sharedprocess] [info] Renamed to /home/quynx/.vscode/extensions/eliverlara.andromeda-1.7.0
+[2020-12-14 16:05:25.088] [sharedprocess] [info] Installation completed. eliverlara.andromeda
+[2020-12-14 16:05:25.100] [sharedprocess] [info] Extensions installed successfully: eliverlara.andromeda
+[2020-12-14 16:05:25.102] [sharedprocess] [info] Downloaded extension: vscodevim.vim undefined
+[2020-12-14 16:05:25.110] [sharedprocess] [info] Extracted extension to /home/quynx/.vscode/extensions/.ryanolsonx.solarized-2.0.3: ryanolsonx.solarized
+[2020-12-14 16:05:25.110] [sharedprocess] [info] Downloaded extension: 13xforever.language-x86-64-assembly undefined
+[2020-12-14 16:05:25.112] [sharedprocess] [info] Renamed to /home/quynx/.vscode/extensions/ryanolsonx.solarized-2.0.3
+[2020-12-14 16:05:25.117] [sharedprocess] [info] Installation completed. ryanolsonx.solarized
+[2020-12-14 16:05:25.126] [sharedprocess] [info] Extensions installed successfully: ryanolsonx.solarized
+[2020-12-14 16:05:25.139] [sharedprocess] [info] Extracted extension to /home/quynx/.vscode/extensions/.dracula-theme.theme-dracula-2.22.3: dracula-theme.theme-dracula
+[2020-12-14 16:05:25.139] [sharedprocess] [info] Renamed to /home/quynx/.vscode/extensions/dracula-theme.theme-dracula-2.22.3
+[2020-12-14 16:05:25.146] [sharedprocess] [info] Installation completed. dracula-theme.theme-dracula
+[2020-12-14 16:05:25.153] [sharedprocess] [info] Extensions installed successfully: dracula-theme.theme-dracula
+[2020-12-14 16:05:25.217] [sharedprocess] [info] Downloaded extension: ms-vscode.cpptools undefined
+[2020-12-14 16:05:25.218] [sharedprocess] [info] Extracted extension to /home/quynx/.vscode/extensions/.13xforever.language-x86-64-assembly-2.3.0: 13xforever.language-x86-64-assembly
+[2020-12-14 16:05:25.219] [sharedprocess] [info] Renamed to /home/quynx/.vscode/extensions/13xforever.language-x86-64-assembly-2.3.0
+[2020-12-14 16:05:25.222] [sharedprocess] [info] Installation completed. 13xforever.language-x86-64-assembly
+[2020-12-14 16:05:25.228] [sharedprocess] [info] Extensions installed successfully: 13xforever.language-x86-64-assembly
+[2020-12-14 16:05:25.234] [sharedprocess] [info] Extracted extension to /home/quynx/.vscode/extensions/.ms-vscode-remote.remote-wsl-0.52.0: ms-vscode-remote.remote-wsl
+[2020-12-14 16:05:25.235] [sharedprocess] [info] Renamed to /home/quynx/.vscode/extensions/ms-vscode-remote.remote-wsl-0.52.0
+[2020-12-14 16:05:25.237] [sharedprocess] [info] Installation completed. ms-vscode-remote.remote-wsl
+[2020-12-14 16:05:25.241] [sharedprocess] [info] Extensions installed successfully: ms-vscode-remote.remote-wsl
+[2020-12-14 16:05:25.446] [sharedprocess] [info] Extracted extension to /home/quynx/.vscode/extensions/.vscodevim.vim-1.18.5: vscodevim.vim
+[2020-12-14 16:05:25.447] [sharedprocess] [info] Renamed to /home/quynx/.vscode/extensions/vscodevim.vim-1.18.5
+[2020-12-14 16:05:25.450] [sharedprocess] [info] Installation completed. vscodevim.vim
+[2020-12-14 16:05:25.456] [sharedprocess] [info] Extensions installed successfully: vscodevim.vim
+[2020-12-14 16:05:25.807] [sharedprocess] [info] Extracted extension to /home/quynx/.vscode/extensions/.ms-vscode.cpptools-1.1.3: ms-vscode.cpptools
+[2020-12-14 16:05:25.808] [sharedprocess] [info] Renamed to /home/quynx/.vscode/extensions/ms-vscode.cpptools-1.1.3
+[2020-12-14 16:05:25.815] [sharedprocess] [info] Installation completed. ms-vscode.cpptools
+[2020-12-14 16:05:25.824] [sharedprocess] [info] Extensions installed successfully: ms-vscode.cpptools
+[2020-12-14 16:05:26.066] [sharedprocess] [info] Downloaded extension: ms-python.python undefined
+[2020-12-14 16:05:28.909] [sharedprocess] [info] Extracted extension to /home/quynx/.vscode/extensions/.ms-python.python-2020.11.371526539: ms-python.python
+[2020-12-14 16:05:28.909] [sharedprocess] [info] Renamed to /home/quynx/.vscode/extensions/ms-python.python-2020.11.371526539
+[2020-12-14 16:05:28.913] [sharedprocess] [info] Installation completed. ms-python.python
+[2020-12-14 16:05:28.931] [sharedprocess] [info] Extensions installed successfully: ms-python.python
+[2020-12-14 16:05:31.057] [sharedprocess] [info] Downloaded extension: ms-toolsai.jupyter undefined
+[2020-12-14 16:05:32.126] [sharedprocess] [info] Extracted extension to /home/quynx/.vscode/extensions/.ms-toolsai.jupyter-2020.12.414227025: ms-toolsai.jupyter
+[2020-12-14 16:05:32.126] [sharedprocess] [info] Renamed to /home/quynx/.vscode/extensions/ms-toolsai.jupyter-2020.12.414227025
+[2020-12-14 16:05:32.133] [sharedprocess] [info] Installation completed. ms-toolsai.jupyter
+[2020-12-14 16:05:32.138] [sharedprocess] [info] Extensions installed successfully: ms-toolsai.jupyter
