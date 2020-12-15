@@ -1,3 +1,0 @@
-[2020-12-14 16:00:07.520] [sharedprocess] [info] main {"machineId":"0431a8f54aeadab609be8f1c336f32d68499d884eefdb3b04e55b7aabaf9233a","windowId":2}
-[2020-12-14 16:00:07.594] [sharedprocess] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/quynx/.config/Code/User/snippets'
-[2020-12-14 16:00:47.540] [sharedprocess] [info] Starting to clean up unused language packs.

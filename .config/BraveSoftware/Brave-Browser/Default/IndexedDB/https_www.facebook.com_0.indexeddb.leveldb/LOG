@@ -1,5 +1,0 @@
-2020/12/11-17:10:35.352 4536 Reusing MANIFEST /home/quynx/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/12/11-17:11:07.376 4536 Level-0 table #5: started
-2020/12/11-17:11:07.380 4536 Level-0 table #5: 1233 bytes OK
-2020/12/11-17:11:07.383 4536 Delete type=0 #3
-2020/12/11-17:11:07.384 4536 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

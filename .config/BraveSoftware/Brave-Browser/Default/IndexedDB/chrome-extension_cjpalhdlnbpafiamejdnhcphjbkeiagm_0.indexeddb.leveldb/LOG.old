@@ -1,8 +1,0 @@
-2020/12/14-17:44:05.718 f3b7 Reusing MANIFEST /home/quynx/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/chrome-extension_cjpalhdlnbpafiamejdnhcphjbkeiagm_0.indexeddb.leveldb/MANIFEST-000001
-2020/12/14-17:44:05.718 f3b7 Recovering log #43
-2020/12/14-17:44:05.718 f3b7 Reusing old log /home/quynx/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/chrome-extension_cjpalhdlnbpafiamejdnhcphjbkeiagm_0.indexeddb.leveldb/000043.log 
-2020/12/14-17:44:07.723 f3b7 Level-0 table #47: started
-2020/12/14-17:44:07.723 f3b7 Level-0 table #47: 0 bytes OK
-2020/12/14-17:44:07.731 f3b7 Delete type=0 #43
-2020/12/14-17:44:07.731 f3b7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
-2020/12/14-17:44:07.731 f3b7 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

@@ -1,5 +1,0 @@
-2020/12/13-18:03:13.389 1636 Reusing MANIFEST /home/quynx/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/12/13-18:05:39.154 193c Level-0 table #5: started
-2020/12/13-18:05:39.160 193c Level-0 table #5: 532233 bytes OK
-2020/12/13-18:05:39.163 193c Delete type=0 #3
-2020/12/13-18:05:39.163 193c Manual compaction at level-0 from (begin) .. (end); will stop at (end)
