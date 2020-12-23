@@ -1,2 +1,3 @@
 # My personal dotfiles
-Arch Linux with i3 and Gnome on Xorg.
+Arch Linux with Sway on Wayland
+Gruvbox theme
