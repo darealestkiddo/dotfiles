@@ -42,8 +42,8 @@ bindsym $mod+Shift+q kill
 
 for_window [class="URxvt" instance="launcher"] floating enable, border pixel 10, sticky enable
 for_window [class="URxvt"] floating enable, border pixel 10, sticky enable
-set $menu exec jrxvt -geometry 55x18 -name launcher -e env TERMINAL_COMMAND="urxvt -e" sway-launcher-desktop
-bindsym $mod+d kxec $menu
+set $menu exec urxvt -geometry 55x18 -name launcher -e env TERMINAL_COMMAND="urxvt -e" sway-launcher-desktop
+bindsym $mod+d exec $menu
 #
 # change focus
 bindsym $mod+h focus left
