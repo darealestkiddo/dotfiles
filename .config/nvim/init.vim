@@ -1,5 +1,5 @@
 map <F4> :syn on<CR>
-set nu
+set nu rnu
 se autochdir
 set encoding=UTF-8
 set clipboard=unnamedplus
@@ -29,8 +29,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
-"Plug 'altercation/vim-colors-solarized'
-Plug 'overcache/NeoSolarized'
+"Plug 'overcache/NeoSolarized'
+Plug 'morhetz/gruvbox'
 " Use release branch (Recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
@@ -43,16 +43,14 @@ Plug '907th/vim-auto-save'
 Plug 'ryanoasis/vim-devicons'
 Plug 'searleser97/cpbooster.vim'
 Plug 'ap/vim-css-color'
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clangd-completer --go-completer --rust-completer --ts-completer' }
-"Plug 'rdnetto/ycm-generator', { 'branch': 'stable' }
 Plug 'Raimondi/delimitMate'
 Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
 "floaterm
-nnoremap   <silent>   <leader>tt :FloatermToggle<CR>
-tnoremap   <silent>   <leader>tt :FloatermToggle<CR>
+nnoremap   <silent>   <F12> :FloatermToggle<CR>
+tnoremap   <silent>   <F12> :FloatermToggle<CR>
 nnoremap <silent> <F11> :FloatermNew ranger<CR>
 tnoremap <Esc> <C-\><C-n>
 let g:floaterm_autoinsert = v:false
@@ -81,6 +79,8 @@ let g:python3_host_prog="/usr/bin/python"
 
 autocmd filetype cpp nnoremap <F9> :!g++ -g -ulimit -Wall -Wno-unused-result -std=gnu++17 -O2 % -o %:r<CR>
 autocmd filetype cpp nnoremap <F10> :FloatermNew g++ -g -ulimit -Wall -Wno-unused-result -std=gnu++17 -O2 % -o %:r && ./%:r<CR>
+autocmd filetype c nnoremap <F10> :FloatermNew gcc -g -O2 -std=c11 -o %:r % && ./%r<CR>
+autocmd filetype asm let g:asmsyntax = 'nasm'
 autocmd filetype asm nnoremap <F10> :!nasm -f elf % && ld -m elf_i386 %:r.o -o %:r && ./%:r <CR>
 autocmd filetype asm nnoremap <F9> :!nasm -f elf % && ld -m elf_i386 %:r.o -o %:r<CR>
 autocmd filetype asm set filetype=nasm
@@ -108,21 +108,19 @@ vnoremap <leader>k :m '<-2<CR>gv=gv
 
 "UI stuffs
 syntax on
-set background=light
+set background=dark
 set termguicolors
 "if exists('+termguicolors')
   "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   "let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   "set termguicolors
 "endif
-let g:airline_theme='solarized'
+let g:airline_theme='gruvbox'
 set signcolumn=number
-colorscheme NeoSolarized
-let g:neosolarized_visibility='low'
+colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
-"let g:nord_cursor_line_number_background = 1
 let g:airline_powerline_fonts = 1
-"let g:ycm_enable_diagnostic_signs=0
+let g:gruvbox_transparent_bg = 1
 
 set hidden
 
