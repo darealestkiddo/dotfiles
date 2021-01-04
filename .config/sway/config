@@ -8,15 +8,16 @@ exec --no-startup-id xrdb /home/quynx/.Xresources
 exec --no-startup-id blueman-applet
 exec --no-startup-id gt
 exec --no-startup-id gammastep
-exec --no-startup-id nm-applet
-output * bg /mnt/d/currentWall.jpg fill
+exec --no-startup-id 'nm-applet --indicator'
+exec --no-startup-id ibus-daemon -drx
+output * bg /usr/share/backgrounds/wall.jpg fill
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
  exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
-          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          timeout 600 'swaylock -f -c 000000' \
+          timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f -c 000000'
 
 #bind button
@@ -27,6 +28,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86TouchpadToggle exec swaymsg input 1267:12375:ELAN1300:00_04F3:3057_Touchpad events toggle enabled disabled #toggle touchpad
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -34,15 +36,19 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec alacritty
 
-#firefox
-bindsym $mod+Shift+Return exec firefox 
+bindsym $mod+Shift+r exec urxvt -name files -e env TERMINAL_COMMAND="urxvt -e" ranger
+
+#discord
+bindsym $mod+Shift+d exec discord
+#web browser
+#bindsym $mod+Shift+Return exec firefox 
+bindsym $mod+Shift+Return exec brave-browser-nightly #--enable-features=UseOzonePlatform --ozone-platform=wayland
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
-for_window [class="URxvt" instance="launcher"] floating enable, border pixel 10, sticky enable
-for_window [class="URxvt"] floating enable, border pixel 10, sticky enable
-set $menu exec urxvt -geometry 55x18 -name launcher -e env TERMINAL_COMMAND="urxvt -e" sway-launcher-desktop
+for_window [app_id="launcher"] floating enable, border pixel 10, sticky enable
+set $menu exec alacritty -o window.x=55 window.y=12 font.size=18 --class launcher -e env TERMINAL_COMMAND="alacritty -e" sway-launcher-desktop
 bindsym $mod+d exec $menu
 #
 # change focus
@@ -170,7 +176,7 @@ default_border pixel 2
 for_window [class="XTerm"] floating enable
 for_window [class="Org.gnome.Nautilus"] floating enable
 for_window [class="xdman-Main"] floating enable
-for_window [title="Settings"] floating enable
+for_window [app_id="gnome-control-center" title="Settings"] floating enable
 
 #scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -200,13 +206,16 @@ client.focused #83a598 #83a598 #282828 #8ec07c #83a598
 client.focused_inactive #504945 #504945 #bdae93 #bdae93 #504945
 client.unfocused #504945 #231f20 #bdae93 #665c54 #504945
 client.urgent #fb4934 #fb4934 #282828 #fb4934 #fb4934
-gaps outer 8
-gaps inner 10
+#gaps outer 8
+#gaps inner 10
 
 client.background       #F8F8F2
 
 bar {
         swaybar_command waybar
+        tray_output *
+        #position top
+        tray_padding 3
         font pango:Hack Nerd Font 10
 }
 
@@ -224,3 +233,13 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 #multihead
 output HDMI-A-1 pos 1920 0 res 1920x1080
 output eDP-1 pos 0 0 res 1920x1080
+
+# capture all screens to clipboard    
+bindsym Shift+Print exec grim - | wl-copy    
+    
+# capture the specified screen area to clipboard    
+bindsym Shift+Alt+Print exec grim -g "$(slurp)" - | wl-copy    
+    
+# capture the focused monitor to clipboard    
+bindsym Shift+Control+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
+bindsym Print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png

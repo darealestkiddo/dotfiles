@@ -79,7 +79,7 @@ let g:python3_host_prog="/usr/bin/python"
 
 autocmd filetype cpp nnoremap <F9> :!g++ -g -ulimit -Wall -Wno-unused-result -std=gnu++17 -O2 % -o %:r<CR>
 autocmd filetype cpp nnoremap <F10> :FloatermNew g++ -g -ulimit -Wall -Wno-unused-result -std=gnu++17 -O2 % -o %:r && ./%:r<CR>
-autocmd filetype c nnoremap <F10> :FloatermNew gcc -g -O2 -std=c11 -o %:r % && ./%r<CR>
+autocmd filetype c nnoremap <F10> :FloatermNew gcc -g -O2 -std=c11 -o %:r % && ./%:r<CR>
 autocmd filetype asm let g:asmsyntax = 'nasm'
 autocmd filetype asm nnoremap <F10> :!nasm -f elf % && ld -m elf_i386 %:r.o -o %:r && ./%:r <CR>
 autocmd filetype asm nnoremap <F9> :!nasm -f elf % && ld -m elf_i386 %:r.o -o %:r<CR>

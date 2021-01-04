@@ -6,9 +6,8 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/spotify"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory","temperature", "battery", "tray", "clock"],
+    "modules-right": ["pulseaudio", "cpu", "memory","temperature", "battery", "tray", "clock"],
     "sway/workspaces": {
-        "disable-scroll": true,
         "all-outputs": false,
         "format": "{icon}",
         /*"format-icons": {*/
@@ -46,7 +45,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "  {capacity}% {icon} {time}",
+        "format": "{capacity}% {icon}",
          "format-good": "", // An empty format will hide the module
          "format-full": "",
         "format-icons": ["", "", "", "", ""]
@@ -56,7 +55,7 @@
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         // "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C ",
-                "format": "  {temperatureC}°C   "
+                "format": "  {temperatureC}°C  "
            },
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
@@ -67,7 +66,7 @@
     "pulseaudio": {
         //"scroll-step": 1,
         "format": "  {volume}% {icon}",
-        "format-bluetooth": "  {volume}% {icon}",
+        "format-bluetooth": "  {volume}% {icon} ",
         "format-muted": "  ",
         "format-icons": {
             "headphones": "",
