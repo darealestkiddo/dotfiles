@@ -1,3 +1,4 @@
 # My personal dotfiles
-Arch Linux with Sway on Wayland
+Arch with i3wm
+Windows 10 Arch WSL
 Gruvbox theme
