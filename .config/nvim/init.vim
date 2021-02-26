@@ -31,6 +31,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 "Plug 'overcache/NeoSolarized'
 Plug 'morhetz/gruvbox'
+Plug 'tibabit/vim-templates'
 " Use release branch (Recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
@@ -41,19 +42,11 @@ Plug 'preservim/nerdcommenter'
 Plug 'Chiel92/vim-autoformat'
 Plug '907th/vim-auto-save'
 Plug 'ryanoasis/vim-devicons'
-Plug 'searleser97/cpbooster.vim'
 Plug 'ap/vim-css-color'
 Plug 'Raimondi/delimitMate'
-Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
-"floaterm
-nnoremap   <silent>   <F12> :FloatermToggle<CR>
-tnoremap   <silent>   <F12> :FloatermToggle<CR>
-nnoremap <silent> <F11> :FloatermNew ranger<CR>
-tnoremap <Esc> <C-\><C-n>
-let g:floaterm_autoinsert = v:false
 
 let delimitMate_expand_cr = 1
 let g:auto_save = 0  " enable AutoSave on Vim startup
@@ -68,26 +61,22 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 "autoformat
-"let g:formatdef_mycpp = '"--style=stroustrup"'
-"let g:formatters_cpp = ['mycpp']
-"let g:formatters_c = ['mycpp']
 let g:AutoPairsShortcutJump = ''
-let g:python3_host_prog="/usr/bin/python"
 "autocmd filetype cpp au BufWrite * :Autoformat
 "autocmd filetype c au BufWrite * :Autoformat
 "autocmd filetype python au BufWrite * :Autoformat
 
-autocmd filetype cpp nnoremap <F9> :!g++ -g -ulimit -Wall -Wno-unused-result -std=gnu++17 -O2 % -o %:r<CR>
-autocmd filetype cpp nnoremap <F10> :FloatermNew g++ -g -ulimit -Wall -Wno-unused-result -std=gnu++17 -O2 % -o %:r && ./%:r<CR>
-autocmd filetype c nnoremap <F10> :FloatermNew gcc -g -O2 -std=c11 -o %:r % && ./%:r<CR>
+autocmd filetype cpp nnoremap <F9> :!g++ -g -DQUYNX_DEBUG -Wall -Wshadow -Wno-unused-result -std=gnu++17 -O2 % -o %:r -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG<CR>
+autocmd filetype cpp nnoremap <F10> :!g++ -g -DQUYNX_DEBUG -Wall -Wshadow -Wno-unused-result -std=gnu++17 -O2 % -o %:r<CR>
+autocmd filetype c nnoremap <F10> :!gcc -g -O2 -std=c11 -o %:r % && ./%:r<CR>
 autocmd filetype asm let g:asmsyntax = 'nasm'
 autocmd filetype asm nnoremap <F10> :!nasm -f elf % && ld -m elf_i386 %:r.o -o %:r && ./%:r <CR>
 autocmd filetype asm nnoremap <F9> :!nasm -f elf % && ld -m elf_i386 %:r.o -o %:r<CR>
 autocmd filetype asm set filetype=nasm
 autocmd filetype c nnoremap <F9> :! gcc -g -std=c11 -o %:r % -O2<CR>
-autocmd filetype cpp nnoremap <F5> :FloatermNew ./%:r<CR>
-autocmd filetype c nnoremap <F5> :FloatermNew ./%:r <CR>
-autocmd filetype python nnoremap <F5> :FloatermNew python3 %<CR>
+autocmd filetype cpp nnoremap <F5> :!./%:r<input.txt<CR>
+autocmd filetype c nnoremap <F5> :!./%:r <CR>
+autocmd filetype python nnoremap <F5> :!python3 % < input.txt<CR>
 autocmd filetype asm nnoremap <F5> :!./%:r<CR>
 "yank
 nnoremap <leader>y :%y<CR>
@@ -137,9 +126,12 @@ set updatetime=300
 set shortmess+=c
 "
 "Skeleton template
-:autocmd BufNewFile *.cpp 0r ~/.config/nvim/templates/skeleton.cpp
-:autocmd BufNewFile *.py 0r ~/.config/nvim/templates/skeleton.py
-:autocmd BufNewFile *.c 0r ~/.config/nvim/templates/skeleton.c
+":autocmd BufNewFile *.cpp 0r ~/.config/nvim/templates/skeleton.cpp
+":autocmd BufNewFile *.py 0r ~/.config/nvim/templates/skeleton.py
+":autocmd BufNewFile *.c 0r ~/.config/nvim/templates/skeleton.c
+
+"vim-templates
+let g:tmpl_search_paths = ['/home/quynx/.config/nvim/templates']
 
 "coc shit
 " Use tab for trigger completion with characters ahead and navigate.

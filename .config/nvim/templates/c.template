@@ -1,0 +1,14 @@
+/**
+ * @author      : {{NAME}}
+ * @created     : {{TODAY}} {{TIME}}
+ * @filename    : {{FILE}}
+ * @source      : 
+ */
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    {{CURSOR}}
+    return 0;
+}
