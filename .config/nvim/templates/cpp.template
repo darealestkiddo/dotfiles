@@ -2,10 +2,24 @@
  * @author      : {{NAME}}
  * @created     : {{TODAY}} {{TIME}}
  * @filename    : {{FILE}}
- * @source      : {{CURSOR}}
  */
 
-#include <bits/stdc++.h>
+#include <cstdio>
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <set>
+#include <map>
+#include <queue>
+#include <stack>
+#include <list>
+#include <chrono>
+#include <random>
+#include <cstdlib>
+#include <cmath>
+#include <ctime>
+#include <cstring>
+#include <iomanip>
 using namespace std;
 
 template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
@@ -23,8 +37,6 @@ int main() {
     ios_base::sync_with_stdio(false);
 #ifndef QUYNX_DEBUG 
     cin.tie(nullptr);
-    //freopen("{{FILE}}.in", "r", stdin);
-    //freopen("{{FILE}}.out", "w", stdout);
 #endif
-    
+    {{CURSOR}}
 }

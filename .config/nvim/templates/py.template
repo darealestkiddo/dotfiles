@@ -2,10 +2,10 @@
   @author      : {{NAME}}
   @created     : {{TODAY}} {{TIME}}
   @filename    : {{FILE}}
-  @source      : {{CURSOR}}
 """
 
 def main():
-    
+    {{CURSOR}}
+
 if __name__ == "__main__":
     main()
