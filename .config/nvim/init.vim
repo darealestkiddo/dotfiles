@@ -30,6 +30,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 "Plug 'overcache/NeoSolarized'
+"Plug 'arcticicestudio/nord-vim'
 Plug 'morhetz/gruvbox'
 Plug 'tibabit/vim-templates'
 " Use release branch (Recommend)
@@ -131,7 +132,7 @@ set shortmess+=c
 ":autocmd BufNewFile *.c 0r ~/.config/nvim/templates/skeleton.c
 
 "vim-templates
-let g:tmpl_search_paths = ['/home/quynx/.config/nvim/templates']
+let g:tmpl_search_paths = ['/home/xnyuq/.config/nvim/templates']
 
 "coc shit
 " Use tab for trigger completion with characters ahead and navigate.

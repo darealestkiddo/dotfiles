@@ -161,15 +161,10 @@
   },
   "OutputCharset": "Unicode",
   "Flags": 7,
-  "IBflags": 282992,
+  "IBflags": 315760,
   "JupiterFlags": 0,
   "DefaultInputMode": 1,
-  "InputModeMapping": {},
-  "ExceptedList": null,
-  "PreeditWhiteList": null,
-  "X11ClipboardWhiteList": null,
-  "ForwardKeyWhiteList": null,
-  "SLForwardKeyWhiteList": null,
-  "DirectForwardKeyWhiteList": null,
-  "SurroundingTextWhiteList": null
+  "InputModeMapping": {
+    "discord:discord": 1
+  }
 }
