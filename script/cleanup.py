@@ -1,4 +1,4 @@
-# match the atcoder problem testcase format with OnlineJude for deployment
+# match the atcoder problem testcase format with OnlineJudge for deployment
 from shutil import rmtree as rm
 import os, zipfile
 def main():
