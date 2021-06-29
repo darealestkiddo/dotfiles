@@ -132,7 +132,7 @@ set shortmess+=c
 ":autocmd BufNewFile *.c 0r ~/.config/nvim/templates/skeleton.c
 
 "vim-templates
-let g:tmpl_search_paths = ['/home/xnyuq/.config/nvim/templates']
+let g:tmpl_search_paths = ['~/.config/nvim/templates']
 
 "coc shit
 " Use tab for trigger completion with characters ahead and navigate.
