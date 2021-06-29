@@ -29,7 +29,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
-"Plug 'overcache/NeoSolarized'
+Plug 'overcache/NeoSolarized'
 "Plug 'arcticicestudio/nord-vim'
 Plug 'morhetz/gruvbox'
 Plug 'tibabit/vim-templates'
@@ -98,16 +98,16 @@ vnoremap <leader>k :m '<-2<CR>gv=gv
 
 "UI stuffs
 syntax on
-set background=dark
+set background=light
 set termguicolors
 "if exists('+termguicolors')
   "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   "let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   "set termguicolors
 "endif
-let g:airline_theme='gruvbox'
+let g:airline_theme='solarized'
 set signcolumn=number
-colorscheme gruvbox
+colorscheme NeoSolarized
 hi Normal guibg=NONE ctermbg=NONE
 let g:airline_powerline_fonts = 1
 let g:gruvbox_transparent_bg = 1

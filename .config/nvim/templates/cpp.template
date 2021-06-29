@@ -1,9 +1,3 @@
-/**
- * @author      : {{NAME}}
- * @created     : {{TODAY}} {{TIME}}
- * @filename    : {{FILE}}
- */
-
 #include <cstdio>
 #include <iostream>
 #include <algorithm>
