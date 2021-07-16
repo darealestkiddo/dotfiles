@@ -1,4 +1,3 @@
-map <F4> :syn on<CR>
 set nu rnu
 se autochdir
 set encoding=UTF-8
@@ -32,6 +31,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'overcache/NeoSolarized'
 "Plug 'arcticicestudio/nord-vim'
 Plug 'morhetz/gruvbox'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'tibabit/vim-templates'
 " Use release branch (Recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -54,8 +54,10 @@ let g:auto_save = 0  " enable AutoSave on Vim startup
 "autoformat bind
 noremap <F3> :Autoformat<CR>
 "input
+nnoremap <leader> '
 nnoremap <leader>i :10split input.txt<CR>
 nnoremap <leader>w <C-W>W
+inoremap jk <ESC>
 "split
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -99,14 +101,13 @@ vnoremap <leader>k :m '<-2<CR>gv=gv
 "UI stuffs
 syntax on
 set background=light
-set termguicolors
-"if exists('+termguicolors')
-  "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  "let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  "set termguicolors
-"endif
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 let g:airline_theme='solarized'
-set signcolumn=number
+"set signcolumn=number
 colorscheme NeoSolarized
 hi Normal guibg=NONE ctermbg=NONE
 let g:airline_powerline_fonts = 1
