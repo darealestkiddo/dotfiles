@@ -1,2 +1,2 @@
 # My personal dotfiles
-Arch with SwayWM on Wayland
+Recently switch to Windows WSL
