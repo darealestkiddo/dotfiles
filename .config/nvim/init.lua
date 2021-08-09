@@ -158,3 +158,7 @@ for type, icon in pairs(signs) do
 end
 
 
+--- templates
+cmd[[ autocmd BufNewFile *.cpp 0r ~/.config/nvim/templates/skeleton.cpp]]
+cmd[[ autocmd BufNewFile *.py 0r ~/.config/nvim/templates/skeleton.py]]
+cmd[[ autocmd BufNewFile *.c 0r ~/.config/nvim/templates/skeleton.c]]
