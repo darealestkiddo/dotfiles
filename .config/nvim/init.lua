@@ -8,11 +8,10 @@ local paq = require('paq-nvim').paq  -- a convenient alias
 
 paq {'savq/paq-nvim', opt = true}    -- paq-nvim manages itself
 paq {'nvim-treesitter/nvim-treesitter'}
---paq {'neovim/nvim-lspconfig'}
+paq {'neovim/nvim-lspconfig'}
 paq {'junegunn/fzf', run = fn['fzf#install']}
 paq {'junegunn/fzf.vim'}
 paq {'ojroques/nvim-lspfuzzy'}
-paq {'overcache/NeoSolarized'}
 paq {'vim-airline/vim-airline'}
 paq {'vim-airline/vim-airline-themes'}
 paq {'easymotion/vim-easymotion'}
@@ -21,17 +20,18 @@ paq {'ryanoasis/vim-devicons'}
 paq {'ap/vim-css-color'}
 paq {'Raimondi/delimitMate'}
 paq {'airblade/vim-gitgutter'}
---paq {'hrsh7th/nvim-compe'}
-paq {'samrath2007/kytoto.nvim'}
+paq {'hrsh7th/nvim-compe'}
+paq {'lifepillar/vim-solarized8'}
+paq {'folke/lsp-colors.nvim'}
 
 
 -------------------- OPTIONS -------------------------------
-cmd 'colorscheme NeoSolarized'            -- Put your favorite colorscheme here
+cmd 'colorscheme solarized8'            -- Put your favorite colorscheme here
 opt.background = 'light'
 opt.signcolumn = 'number'
 opt.completeopt = 'menuone,noselect'
-opt.clipboard= 'unnamedplus'
-cmd 'noswapfile'
+opt.clipboard = 'unnamedplus'
+opt.swapfile = false
 opt.mouse = 'a'
 opt.expandtab = true                -- Use spaces instead of tabs
 opt.hidden = true                   -- Enable background buffers
@@ -72,7 +72,13 @@ map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {expr = true})
 
 map('n', '<C-l>', '<cmd>noh<CR>')    -- Clear highlights
 map('n', '<leader>o', 'm`o<Esc>``')  -- Insert a newline in normal mode
-map('n', '<F9>', ':!build.sh 1 %:r<CR>')
+map('n', '<leader>i', ':10split input.txt<CR>')
+
+-- map build and run commands
+cmd [[autocmd FileType cpp nnoremap <F9> :!build.sh 1 %:r<CR>]]
+cmd [[autocmd FileType cpp nnoremap <F10> :!build.sh 0 %:r<CR>]]
+cmd [[autocmd FileType cpp nnoremap <F5> :!./%:r < input.txt<CR>]]
+cmd [[autocmd FileType python nnoremap <F5> :!python3 % < input.txt<CR>]]
 
 -------------------- TREE-SITTER ---------------------------
 local ts = require 'nvim-treesitter.configs'
@@ -134,10 +140,16 @@ require'compe'.setup {
     luasnip = true;
   };
 }
-cmd [[highlight! link SignColumn LineNr]]
+--cmd [[highlight! link SignColumn LineNr]]
 
 --- lsp UI customization
 
+vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+  virtual_text = true,
+  signs = true,
+  underline = false,
+  update_in_insert = true,
+})
 local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
 
 for type, icon in pairs(signs) do
@@ -145,12 +157,4 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
--- You will likely want to reduce updatetime which affects CursorHold
--- note: this setting is global and should be set only once
-vim.o.updatetime = 250
-vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]]
 
-vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  virtual_text = false,
-  update_in_insert = true,
-})
