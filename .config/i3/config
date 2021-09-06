@@ -23,7 +23,7 @@ exec --no-startup-id ibus-daemon -drx
 exec --no-startup-id feh --bg-scale /home/xnyuq/7Oiwp8r.png
 exec --no-startup-id volumeicon
 #exec --no-startup-id picom
-exec --no-startup-id barrier
+#exec --no-startup-id barrier
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -38,7 +38,7 @@ bindsym $mod+Shift+Return exec --no-startup-id firefox
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id rofi --show drun
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a

@@ -20,14 +20,13 @@ paq {'ryanoasis/vim-devicons'}
 paq {'ap/vim-css-color'}
 paq {'Raimondi/delimitMate'}
 paq {'airblade/vim-gitgutter'}
+paq {'terryma/vim-multiple-cursors'}
+paq {'sainnhe/gruvbox-material'}
 paq {'hrsh7th/nvim-compe'}
-paq {'lifepillar/vim-solarized8'}
-paq {'folke/lsp-colors.nvim'}
-
 
 -------------------- OPTIONS -------------------------------
-cmd 'colorscheme solarized8'            -- Put your favorite colorscheme here
-opt.background = 'light'
+cmd 'colorscheme gruvbox-material'            -- Put your favorite colorscheme here
+opt.background = 'dark'
 opt.signcolumn = 'number'
 opt.completeopt = 'menuone,noselect'
 opt.clipboard = 'unnamedplus'
@@ -54,6 +53,21 @@ opt.wildmode = {'list', 'longest'}  -- Command-line completion mode
 opt.wrap = false                    -- Disable line wrap
 g.delimitMate_expand_cr = 1
 g.airline_powerline_fonts = 1
+g.gruvbox_material_background = 'soft'
+
+require('compe').setup {
+  enabled = true,
+  autocomplete = true,
+  documentation = true,
+
+  source = {
+    path = true,
+    buffer = true,
+    nvim_lsp = true,
+  }
+}
+vim.api.nvim_set_keymap('i', '<C-Space>', 'compe#complete()', { noremap = true, silent = true, expr = true })
+vim.api.nvim_set_keymap('i', '<CR>', [[ compe#confirm({ 'keys': "\<Plug>delimitMateCR", 'mode': '' }) ]], { noremap = true, silent = true, expr = true })
 
 local function map(mode, lhs, rhs, opts)
   local options = {noremap = true}
@@ -73,12 +87,15 @@ map('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', {expr = true})
 map('n', '<C-l>', '<cmd>noh<CR>')    -- Clear highlights
 map('n', '<leader>o', 'm`o<Esc>``')  -- Insert a newline in normal mode
 map('n', '<leader>i', ':10split input.txt<CR>')
+map('n', '<leader>y', ':%y+<CR>')
+map('i', 'jk', '<ESC>')
 
 -- map build and run commands
-cmd [[autocmd FileType cpp nnoremap <F9> :!build.sh 1 %:r<CR>]]
-cmd [[autocmd FileType cpp nnoremap <F10> :!build.sh 0 %:r<CR>]]
+cmd [[autocmd FileType cpp nnoremap <F9> :w<CR>:!build.sh 1 %:r<CR>]]
+cmd [[autocmd FileType cpp nnoremap <F10> :w<CR>:!build.sh 0 %:r<CR>]]
 cmd [[autocmd FileType cpp nnoremap <F5> :!./%:r < input.txt<CR>]]
-cmd [[autocmd FileType python nnoremap <F5> :!python3 % < input.txt<CR>]]
+cmd [[autocmd FileType python nnoremap <F5> :w<CR>:!python3 % < input.txt<CR>]]
+cmd [[autocmd FileType java nnoremap <F5> :w<CR>:!java % < input.txt<CR>]]
 
 -------------------- TREE-SITTER ---------------------------
 local ts = require 'nvim-treesitter.configs'
@@ -89,9 +106,10 @@ local lsp = require 'lspconfig'
 local lspfuzzy = require 'lspfuzzy'
 
 -- We use the default settings for clangd and pylsp: the option table can stay empty
-lsp.clangd.setup {}
-lsp.pyright.setup {}
-lspfuzzy.setup {}  -- Make the LSP client use FZF instead of the quickfix list
+lsp.clangd.setup{}
+lsp.pyright.setup{}
+lsp.jdtls.setup{cmd={'jdtls'}}
+lspfuzzy.setup{}  -- Make the LSP client use FZF instead of the quickfix list
 
 map('n', '<space>,', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
 map('n', '<space>;', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
@@ -106,40 +124,6 @@ map('n', '<space>s', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')
 -------------------- COMMANDS ------------------------------
 cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'  -- disabled in visual mode
 
----- autocomplete setup
-require'compe'.setup {
-  enabled = true;
-  autocomplete = true;
-  debug = false;
-  min_length = 1;
-  preselect = 'enable';
-  throttle_time = 80;
-  source_timeout = 200;
-  resolve_timeout = 800;
-  incomplete_delay = 400;
-  max_abbr_width = 100;
-  max_kind_width = 100;
-  max_menu_width = 100;
-  documentation = {
-    border = { '', '' ,'', ' ', '', '', '', ' ' }, -- the border option is the same as `|help nvim_open_win|`
-    winhighlight = "NormalFloat:CompeDocumentation,FloatBorder:CompeDocumentationBorder",
-    max_width = 120,
-    min_width = 60,
-    max_height = math.floor(vim.o.lines * 0.3),
-    min_height = 1,
-  };
-
-  source = {
-    path = true;
-    buffer = true;
-    calc = true;
-    nvim_lsp = true;
-    nvim_lua = true;
-    vsnip = true;
-    ultisnips = true;
-    luasnip = true;
-  };
-}
 --cmd [[highlight! link SignColumn LineNr]]
 
 --- lsp UI customization
