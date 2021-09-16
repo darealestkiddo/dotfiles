@@ -22,7 +22,11 @@ paq {'Raimondi/delimitMate'}
 paq {'airblade/vim-gitgutter'}
 paq {'terryma/vim-multiple-cursors'}
 paq {'sainnhe/gruvbox-material'}
-paq {'hrsh7th/nvim-compe'}
+paq {'folke/lsp-colors.nvim'}
+paq {'shougo/deoplete-lsp'}
+paq {'shougo/deoplete.nvim', run = fn['remote#host#UpdateRemotePlugins']}
+paq {'tbodt/deoplete-tabnine', run = './install.sh'}
+paq {'mfussenegger/nvim-jdtls'}
 
 -------------------- OPTIONS -------------------------------
 cmd 'colorscheme gruvbox-material'            -- Put your favorite colorscheme here
@@ -54,20 +58,9 @@ opt.wrap = false                    -- Disable line wrap
 g.delimitMate_expand_cr = 1
 g.airline_powerline_fonts = 1
 g.gruvbox_material_background = 'soft'
+g['deoplete#enable_at_startup'] = 1
+cmd[[ let g:NERDCustomDelimiters = { 'c': { 'left': '/* ', 'right': ' */', 'leftAlt': '////' } }]]
 
-require('compe').setup {
-  enabled = true,
-  autocomplete = true,
-  documentation = true,
-
-  source = {
-    path = true,
-    buffer = true,
-    nvim_lsp = true,
-  }
-}
-vim.api.nvim_set_keymap('i', '<C-Space>', 'compe#complete()', { noremap = true, silent = true, expr = true })
-vim.api.nvim_set_keymap('i', '<CR>', [[ compe#confirm({ 'keys': "\<Plug>delimitMateCR", 'mode': '' }) ]], { noremap = true, silent = true, expr = true })
 
 local function map(mode, lhs, rhs, opts)
   local options = {noremap = true}
@@ -108,8 +101,14 @@ local lspfuzzy = require 'lspfuzzy'
 -- We use the default settings for clangd and pylsp: the option table can stay empty
 lsp.clangd.setup{}
 lsp.pyright.setup{}
-lsp.jdtls.setup{cmd={'jdtls'}}
+--lsp.jdtls.setup{cmd={'jdtls'}}
 lspfuzzy.setup{}  -- Make the LSP client use FZF instead of the quickfix list
+cmd[[if has('nvim-0.5')
+  augroup lsp
+    au!
+    au FileType java lua require('jdtls').start_or_attach({cmd = {'jdtls'}})
+  augroup end
+endif]]
 
 map('n', '<space>,', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
 map('n', '<space>;', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
@@ -146,3 +145,4 @@ end
 cmd[[ autocmd BufNewFile *.cpp 0r ~/.config/nvim/templates/skeleton.cpp]]
 cmd[[ autocmd BufNewFile *.py 0r ~/.config/nvim/templates/skeleton.py]]
 cmd[[ autocmd BufNewFile *.c 0r ~/.config/nvim/templates/skeleton.c]]
+cmd[[ autocmd BufNewFile *.java 0r ~/.config/nvim/templates/skeleton.java]]
