@@ -23,16 +23,20 @@ paq {'airblade/vim-gitgutter'}
 paq {'terryma/vim-multiple-cursors'}
 paq {'sainnhe/gruvbox-material'}
 paq {'folke/lsp-colors.nvim'}
-paq {'shougo/deoplete-lsp'}
-paq {'shougo/deoplete.nvim', run = fn['remote#host#UpdateRemotePlugins']}
-paq {'tbodt/deoplete-tabnine', run = './install.sh'}
 paq {'mfussenegger/nvim-jdtls'}
+
+-- cmp
+paq {'hrsh7th/cmp-nvim-lsp'}
+paq {'hrsh7th/cmp-buffer'}
+paq {'hrsh7th/nvim-cmp'}
+paq {'hrsh7th/cmp-vsnip'}
+paq {'hrsh7th/vim-vsnip'}
 
 -------------------- OPTIONS -------------------------------
 cmd 'colorscheme gruvbox-material'            -- Put your favorite colorscheme here
 opt.background = 'dark'
 opt.signcolumn = 'number'
-opt.completeopt = 'menuone,noselect'
+opt.completeopt = 'menu,menuone,noselect'
 opt.clipboard = 'unnamedplus'
 opt.swapfile = false
 opt.mouse = 'a'
@@ -140,6 +144,61 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
+--- nvim-cmp
+local cmp = require'cmp'
+
+cmp.setup({
+snippet = {
+    expand = function(args)
+    -- For `vsnip` user.
+    vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` user.
+
+    -- For `luasnip` user.
+    -- require('luasnip').lsp_expand(args.body)
+
+    -- For `ultisnips` user.
+    -- vim.fn["UltiSnips#Anon"](args.body)
+    end,
+},
+mapping = {
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.close(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+},
+sources = {
+    { name = 'nvim_lsp' },
+
+    -- For vsnip user.
+    { name = 'vsnip' },
+
+    -- For luasnip user.
+    -- { name = 'luasnip' },
+
+    -- For ultisnips user.
+    -- { name = 'ultisnips' },
+
+    { name = 'buffer' },
+}
+})
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.documentationFormat = { 'markdown', 'plaintext' }
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.preselectSupport = true
+capabilities.textDocument.completion.completionItem.insertReplaceSupport = true
+capabilities.textDocument.completion.completionItem.labelDetailsSupport = true
+capabilities.textDocument.completion.completionItem.deprecatedSupport = true
+capabilities.textDocument.completion.completionItem.commitCharactersSupport = true
+capabilities.textDocument.completion.completionItem.tagSupport = { valueSet = { 1 } }
+capabilities.textDocument.completion.completionItem.resolveSupport = {
+  properties = {
+    'documentation',
+    'detail',
+    'additionalTextEdits',
+  },
+}
 
 --- templates
 cmd[[ autocmd BufNewFile *.cpp 0r ~/.config/nvim/templates/skeleton.cpp]]
