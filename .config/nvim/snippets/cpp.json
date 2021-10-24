@@ -1,0 +1,26 @@
+{
+    "Binary Tree": {
+    "prefix": "bintree",
+    "body": [
+        "class Node {",
+        "   public:",
+        "    Node* left;",
+        "    Node* right;",
+        "    int num;",
+        "    Node(int n) {",
+        "        left = right = NULL;",
+        "        num = n;",
+        "    }",
+        "};",
+        "",
+        "void Free(Node* root) {",
+        "    if (!root) return;",
+        "    Free(root->left);",
+        "    Free(root->right);",
+        "    delete root;",
+        "}"
+    ],
+    "description": ""
+    }
+}
+

@@ -63,6 +63,7 @@ g.delimitMate_expand_cr = 1
 g.airline_powerline_fonts = 1
 g.gruvbox_material_background = 'soft'
 g['deoplete#enable_at_startup'] = 1
+g.vsnip_snippet_dir = '/home/xnyuq/.config/nvim/snippets'
 cmd[[ let g:NERDCustomDelimiters = { 'c': { 'left': '/* ', 'right': ' */', 'leftAlt': '////' } }]]
 
 
