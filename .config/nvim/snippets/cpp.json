@@ -1,26 +1,46 @@
 {
-    "Binary Tree": {
-    "prefix": "bintree",
-    "body": [
-        "class Node {",
-        "   public:",
-        "    Node* left;",
-        "    Node* right;",
-        "    int num;",
-        "    Node(int n) {",
-        "        left = right = NULL;",
-        "        num = n;",
-        "    }",
-        "};",
-        "",
-        "void Free(Node* root) {",
-        "    if (!root) return;",
-        "    Free(root->left);",
-        "    Free(root->right);",
-        "    delete root;",
-        "}"
-    ],
-    "description": ""
+    "Segment Tree": {
+        "prefix": "segtree",
+        "body": [
+            "template<class T> struct Seg {",
+            "    const T ID = 1e9+100;",
+            "    int n;",
+            "    T comb(T a, T b) { return min(a, b); }",
+            "    vector<T> seg;",
+            "    void init(int _n) { n = _n; seg.assign(2 * n, ID); }",
+            "    void build() { for (int i = n-1; i > 0; --i) pull(i); }",
+            "    void pull(int p) { seg[p] = comb(seg[p<<1], seg[p<<1|1]);}",
+            "    void upd(int p, T val) { for (seg[p+=n] = val; p > 1; p >>= 1) pull(p>>1); }",
+            "    T query(int l, int r) {",
+            "        T ra = ID, rb = ID;",
+            "        for (l += n, r += n; l < r; l >>= 1, r >>= 1) {",
+            "            if (l&1) ra = comb(ra, seg[l++]);",
+            "            if (r&1) rb = comb(rb, seg[--r]);",
+            "        }",
+            "        return comb(ra, rb);",
+            "    }",
+            "};"
+        ],
+        "description": "Zero-based index, half included range"
+    },
+    "Fenwick tree": {
+        "prefix": "fenw",
+        "body": [
+            "template <class T, int ...Ns> struct BIT {",
+            "\tT val = 0; void upd(T v) { val += v; }",
+            "\tT query() { return val; }",
+            "};",
+            "template <class T, int N, int... Ns> struct BIT<T, N, Ns...> {",
+            "\tBIT<T,Ns...> bit[N+1];",
+            "\ttemplate<typename... Args> void upd(int pos, Args... args) { assert(pos > 0);",
+            "\t\tfor (; pos<=N; pos+=pos&-pos) bit[pos].upd(args...); }",
+            "\ttemplate<typename... Args> T sum(int r, Args... args) {",
+            "\t\tT res=0; for (;r;r-=r&-r) res += bit[r].query(args...);",
+            "\t\treturn res; }",
+            "\ttemplate<typename... Args> T query(int l, int r, Args...",
+            "\t\targs) { return sum(r,args...)-sum(l-1,args...); }",
+            "};"
+        ],
+        "description": "1-based index, included range"
     }
 }
-
