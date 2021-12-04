@@ -36,7 +36,7 @@ paq {'hrsh7th/vim-vsnip'}
 cmd 'colorscheme gruvbox-material'            -- Put your favorite colorscheme here
 opt.background = 'dark'
 opt.signcolumn = 'number'
-opt.completeopt = 'menu,menuone,noselect'
+opt.completeopt = 'menu,menuone,noinsert'
 opt.clipboard = 'unnamedplus'
 opt.swapfile = false
 opt.mouse = 'a'
