@@ -16,20 +16,30 @@ set $mod Mod4
 font pango: Hack Nerd Font 9
 
 # Startup Application
-exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l dim
+exec --no-startup-id "xss-lock --transfer-sleep-lock -- betterlockscreen -l dimblur"
 exec --no-startup-id nm-applet
-#exec --no-startup-id /home/xnyuq/scripts/alternating_layouts.py
+#exec --no-startup-id /home/xnyuq/dotfiles/scripts/alternating_layouts.py
 exec --no-startup-id ibus-daemon -drx
-exec --no-startup-id feh --bg-scale /home/xnyuq/wallpapers-master-gruvbox/gruvbox/houses.jpg
+exec --no-startup-id feh --bg-scale /home/xnyuq/wall.jpg
 exec --no-startup-id volumeicon
+exec --no-startup-id dunst
+exec --no-startup-id blueman-applet
+#exec --no-startup-id easyeffects --gapplication-service
 #exec --no-startup-id picom
 #exec --no-startup-id barrier
+
+# dunst shortcut
+
+bindsym Ctrl+space exec --no-startup-id dunstctl close-all
+bindsym Ctrl+Shift+space exec --no-startup-id dunstctl history-pop
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+#bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id kitty
 
 # start browser
 bindsym $mod+Shift+Return exec --no-startup-id firefox
@@ -44,7 +54,7 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun,ssh,run -show combi -icon-theme Arc-X-D -show-icons" 
+bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun,ssh,run -show combi -icon-theme Tela -show-icons" 
 
 # change focus
 bindsym $mod+h focus left
@@ -94,6 +104,13 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+
+# change focused container
+bindsym $mod+Tab focus parent; focus child
+#bindsym $mod+Shift+Tab focus parent; focus left; focus child
+
+#bindsym $mod+Tab focus parent; focus right; focus child
+#bindsym $mod+Shift+Tab focus parent; focus left; focus child
 
 # Pulse Audio controls
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -185,8 +202,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ### UI Stuffs
-#default_border pixel 1
-#default_floating_border pixel 1
+default_border pixel 1
+default_floating_border pixel 1
 
 # set primary gruvbox colorscheme colors
 set $bg #282828
@@ -229,7 +246,7 @@ client.urgent           $red $red $white $red $red
 ### Multi monitor setup
 bindsym $mod+m move workspace to output right
 
-exec --no-startup-id xrandr --auto --output HDMI1 --primary --right-of eDP1
+exec --no-startup-id xrandr --auto --output HDMI1 --primary --left-of eDP1
 # assign workspaces to screens
 workspace 1 output HDMI1
 workspace 2 output HDMI1
@@ -246,7 +263,7 @@ workspace 10 output eDP1
 bindsym $mod+p mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id betterlockscreen -l dim, mode "default"
+    bindsym l exec --no-startup-id "betterlockscreen -l dimblur", mode "default"
     bindsym s exec --no-startup-id i3exit suspend, mode "default"
     bindsym u exec --no-startup-id i3exit switch_user, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"

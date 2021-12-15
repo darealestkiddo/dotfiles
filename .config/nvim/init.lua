@@ -60,6 +60,7 @@ opt.termguicolors = true            -- True color support
 opt.wildmode = {'list', 'longest'}  -- Command-line completion mode
 opt.wrap = false                    -- Disable line wrap
 g.delimitMate_expand_cr = 1
+g.airline_theme = 'gruvbox_material'
 g.airline_powerline_fonts = 1
 g.gruvbox_material_background = 'soft'
 g['deoplete#enable_at_startup'] = 1
