@@ -4,9 +4,19 @@
 
 " You want Vim, not vi. When Vim finds a vimrc, 'nocompatible' is set anyway.
 " We set it explicitely to make our position clear!
-set clipboard=unnamedplus
+"
+
+if has('python3')
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'preservim/nerdcommenter'
+Plug 'ycm-core/YouCompleteMe'
+call plug#end()
+set clipboard=unnamed
 set nu rnu
 set nocompatible
+set encoding=utf-8
 
 filetype plugin indent on  " Load plugins according to detected filetype.
 syntax on                  " Enable syntax highlighting.
@@ -52,6 +62,9 @@ if &shell =~# 'fish$'
   set shell=/bin/bash
 endif
 
+imap jk <ESC>
+au BufRead,BufNewFile *.asm set filetype=nasm
+
 " Put all temporary files under the same directory.
 " https://github.com/mhinz/vim-galore#temporary-files
 set backup
@@ -63,4 +76,9 @@ set updatecount =100
 set undofile
 set undodir     =$HOME/.vim/files/undo/
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
-imap jk <ESC>
+inoremap <expr> <Enter> pumvisible() ? "<Esc>a" : "<Enter>"
+" auto FileType nasm nnoremap <F9> :w<CR>:!vcvars64.bat && build.bat debug %:r<CR>
+auto FileType nasm nnoremap <F9> :w<CR>:!nasm -f win64 % -o %:r.obj && golink /entry:main kernel32.dll user32.dll %:r.obj<CR>
+auto FileType nasm nnoremap <F10> :w<CR>:!nasm -f win64 % -o %:r.obj && golink /console /entry:main kernel32.dll user32.dll %:r.obj<CR>
+auto FileType nasm nnoremap <F5> :!%:r.exe<CR>
+let NERDSpaceDelims=1
