@@ -3,34 +3,34 @@ local fn = vim.fn    -- to call Vim functions e.g. fn.bufnr()
 local g = vim.g      -- a table to access global variables
 local opt = vim.opt  -- to set options
 
-cmd 'packadd paq-nvim'               -- load the package manager
-local paq = require('paq-nvim').paq  -- a convenient alias
 
-paq {'savq/paq-nvim', opt = true}    -- paq-nvim manages itself
-paq {'nvim-treesitter/nvim-treesitter'}
-paq {'neovim/nvim-lspconfig'}
-paq {'junegunn/fzf', run = fn['fzf#install']}
-paq {'junegunn/fzf.vim'}
-paq {'ojroques/nvim-lspfuzzy'}
-paq {'vim-airline/vim-airline'}
-paq {'vim-airline/vim-airline-themes'}
-paq {'easymotion/vim-easymotion'}
-paq {'preservim/nerdcommenter'}
-paq {'ryanoasis/vim-devicons'}
-paq {'ap/vim-css-color'}
-paq {'Raimondi/delimitMate'}
-paq {'airblade/vim-gitgutter'}
-paq {'terryma/vim-multiple-cursors'}
-paq {'sainnhe/gruvbox-material'}
-paq {'folke/lsp-colors.nvim'}
-paq {'mfussenegger/nvim-jdtls'}
+require "paq" {
+	'savq/paq-nvim';
+	'nvim-treesitter/nvim-treesitter';
+	'neovim/nvim-lspconfig';
+	{'junegunn/fzf', run = fn['fzf#install']};
+	'junegunn/fzf.vim';
+	'ojroques/nvim-lspfuzzy';
+	'vim-airline/vim-airline';
+	'vim-airline/vim-airline-themes';
+	'easymotion/vim-easymotion';
+	'preservim/nerdcommenter';
+	'ryanoasis/vim-devicons';
+	'ap/vim-css-color';
+	'Raimondi/delimitMate';
+	'airblade/vim-gitgutter';
+	'terryma/vim-multiple-cursors';
+	'sainnhe/gruvbox-material';
+	'folke/lsp-colors.nvim';
+	'mfussenegger/nvim-jdtls';
 
 -- cmp
-paq {'hrsh7th/cmp-nvim-lsp'}
-paq {'hrsh7th/cmp-buffer'}
-paq {'hrsh7th/nvim-cmp'}
-paq {'hrsh7th/cmp-vsnip'}
-paq {'hrsh7th/vim-vsnip'}
+	'hrsh7th/cmp-nvim-lsp';
+	'hrsh7th/cmp-buffer';
+	'hrsh7th/nvim-cmp';
+	'hrsh7th/cmp-vsnip';
+	'hrsh7th/vim-vsnip';
+}
 
 -------------------- OPTIONS -------------------------------
 cmd 'colorscheme gruvbox-material'            -- Put your favorite colorscheme here
@@ -61,7 +61,7 @@ opt.wildmode = {'list', 'longest'}  -- Command-line completion mode
 opt.wrap = false                    -- Disable line wrap
 g.delimitMate_expand_cr = 1
 g.airline_theme = 'gruvbox_material'
-g.airline_powerline_fonts = 1
+g.airline_powerline_fonts = 0
 g.gruvbox_material_background = 'soft'
 g['deoplete#enable_at_startup'] = 1
 g.vsnip_snippet_dir = '/home/xnyuq/.config/nvim/snippets'
@@ -98,7 +98,7 @@ cmd [[autocmd FileType java nnoremap <F5> :w<CR>:!java % < input.txt<CR>]]
 
 -------------------- TREE-SITTER ---------------------------
 local ts = require 'nvim-treesitter.configs'
-ts.setup {ensure_installed = 'maintained', highlight = {enable = true}}
+--ts.setup {ensure_installed = 'maintained', highlight = {enable = true}}
 
 -------------------- LSP -----------------------------------
 local lsp = require 'lspconfig'
@@ -107,6 +107,13 @@ local lspfuzzy = require 'lspfuzzy'
 -- We use the default settings for clangd and pylsp: the option table can stay empty
 lsp.clangd.setup{}
 lsp.pyright.setup{}
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+lsp.html.setup{
+    capabilities = capabilities,
+}
+lsp.eslint.setup{}
+lsp.ccls.setup{}
 --lsp.jdtls.setup{cmd={'jdtls'}}
 lspfuzzy.setup{}  -- Make the LSP client use FZF instead of the quickfix list
 cmd[[if has('nvim-0.5')
